@@ -7,30 +7,38 @@ public class Student implements Comparator<Student>{
 	private int num;
 	private String name="";
 	private String addr="";		// 서울/경기/충남
-	private String gender="";
 	private String ban="";
-	private double height;
+	private String gender="";
 	private int age;
+	private double height;
 	private int score;
 	private int year;
 	
 	public Student() {
 		// TODO Auto-generated constructor stub
 	}
-	public Student(int num, String name, String addr, String gender, String ban, double height, int age, int score,
+
+	
+	public Student(int num, String name, String addr, String ban, String gender, int age, double height, int score,
 			int year) {
 		super();
 		this.num = num;
 		this.name = name;
 		this.addr = addr;
-		this.gender = gender;
 		this.ban = ban;
-		this.height = height;
+		this.gender = gender;
 		this.age = age;
+		this.height = height;
 		this.score = score;
 		this.year = year;
 	}
 
+
+	public Student(int num, int score) {
+		super();
+		this.num = num;
+		this.score = score;
+	}
 	public int getNum() {
 		return num;
 	}
@@ -143,6 +151,10 @@ public class Student implements Comparator<Student>{
 		if (year != other.year)
 			return false;
 		return true;
+	}
+	
+	public double gettotal()	{
+		return score;
 	}
 	
 	@Override

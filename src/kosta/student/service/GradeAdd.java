@@ -3,7 +3,6 @@ package kosta.student.service;
 import java.util.Scanner;
 
 import kosta.student.manage.StudentManager;
-import kosta.student.vo.Student;
 
 /** 己利沥焊 眠啊 */
 public class GradeAdd implements StudentService {
@@ -20,6 +19,7 @@ public class GradeAdd implements StudentService {
 		num = scan.nextInt();
 		System.out.print("己利 : ");
 		score = scan.nextInt();
+		
 		
 		
 	}
