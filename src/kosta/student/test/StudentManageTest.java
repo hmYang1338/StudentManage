@@ -30,11 +30,12 @@ import kosta.student.service.StudentService;
 // 깃허브에 commit & push
 // 주석처리 (javadoc)
 
+/** 메인 */
 public class StudentManageTest {
 	public static void main(String[] args) {
 
 		Scanner scan = new Scanner(System.in);
-		StudentService  s = null;
+		StudentService  s;
 		int selectNum=0;
 		while(true){
 			System.out.println("====================================================");
@@ -70,8 +71,6 @@ public class StudentManageTest {
 			default:
 				break;
 			}
-			
 		}
-
 	} // end of main
 } // end of class

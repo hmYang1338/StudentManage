@@ -3,7 +3,9 @@ package kosta.student.service;
 import java.util.Scanner;
 
 import kosta.student.manage.StudentManager;
+import kosta.student.vo.Student;
 
+/** 성적정보 추가 */
 public class GradeAdd implements StudentService {
 
 	@Override
@@ -14,9 +16,9 @@ public class GradeAdd implements StudentService {
 		
 		int num, score;
 		
-		System.out.println("번호 : ");
+		System.out.print("번호 : ");
 		num = scan.nextInt();
-		System.out.println("성적 : ");
+		System.out.print("성적 : ");
 		score = scan.nextInt();
 		
 		

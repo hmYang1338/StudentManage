@@ -1,6 +1,9 @@
 package kosta.student.vo;
 
-public class Student {
+import java.util.Comparator;
+
+/** 학생 */
+public class Student implements Comparator<Student>{
 	private int num;
 	private String name="";
 	private String addr="";		// 서울/경기/충남
@@ -149,5 +152,10 @@ public class Student {
 	}
 	public String getGrade() {
 		return null;
+	}
+	@Override
+	public int compare(Student o1, Student o2) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 }

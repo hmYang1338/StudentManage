@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import kosta.student.manage.StudentManager;
 
+/** 통계 */
 public class Statistics implements StudentService {
 
 	@Override
@@ -11,8 +12,9 @@ public class Statistics implements StudentService {
 		// TODO Auto-generated method stub
 		
 		StudentManager sm = new StudentManager();
-		int num = scan.nextInt();
 		System.out.println("1>성별 그룹화 2>반별 성적 평균 3>주소별 성적 평균 4>학년별 키 평균");
+	
+		int num = scan.nextInt();
 		switch (num) {
 		case 1:
 			System.out.println("1> 성별 그룹화");

@@ -5,7 +5,7 @@ import java.util.Scanner;
 import kosta.student.manage.StudentManager;
 import kosta.student.vo.Student;
 
-
+/** 학생정보 추가 */
 public class StudentAdd implements StudentService {
 	@Override
 	public void execute(Scanner scan) {
@@ -17,31 +17,37 @@ public class StudentAdd implements StudentService {
 		double height;
 		String name, addr, gender, ban;
 		
-		System.out.println("번호 : ");
+		System.out.print("번호 : ");
 		num = scan.nextInt();
 		scan.nextLine();
-		System.out.println("이름 : ");
+		System.out.print("이름 : ");
 		name = scan.nextLine();
-		System.out.println("주소 : ");
+		System.out.print("주소 : ");
 		addr = scan.nextLine();
-		System.out.println("성별 : ");
+		System.out.print("성별 : ");
 		gender = scan.nextLine();
-		System.out.println("반 : ");
+		System.out.print("반 : ");
 		ban = scan.nextLine();
-		System.out.println("키 : ");
+		System.out.print("키 : ");
 		height = scan.nextInt();
 		scan.nextLine();
-		System.out.println("나이 : ");
+		System.out.print("나이 : ");
 		age = scan.nextInt();
 		scan.nextLine();
-		System.out.println("성적 : ");
+		System.out.print("성적 : ");
 		score = scan.nextInt();
 		scan.nextLine();
-		System.out.println("학년 : ");
+		System.out.print("학년 : ");
 		year = scan.nextInt();
 		
-		String c = sm.studentAdd(new Student(num, name, addr, gender, ban, height, age, score, year));
-		System.out.println(c);
+		boolean c = sm.add(new Student(num, name, addr, gender, ban, height, age, score, year));
+		
+		if(c){
+			System.out.println("학생등록 완료");
+		}else {
+			System.out.println("학생등록 실패");
+		}
+
 	}
 	
 } // end of class
